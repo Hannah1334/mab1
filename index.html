@@ -1,0 +1,388 @@
+<style>
+body{
+background-image: url('https://i.imgur.com/hk8YOP5.gif') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+background-color:#ffffff;
+}
+
+::-webkit-scrollbar {width: 3px; height: 3px;}
+::-webkit-scrollbar-track {background: none;}
+::-webkit-scrollbar-thumb {background: #666666;}
+
+#title {
+position:absolute;
+width:25%;
+height:10%;
+top:13%;
+left:60%;
+text-align:center;
+font-size:500%;
+color:#102f3b;
+font-family:Unica One;
+}
+
+#picbox1 {
+position:absolute;
+border:1px solid #999999;
+width:18%;
+height:50%;
+top:25%;
+left:26%;
+background-image: url('https://i.imgur.com/dAhpxP8.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#picbox1:hover {
+background-image: url('https://i.imgur.com/KvLHkvb.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#picbox2 {
+position:absolute;
+border:1px solid #999999;
+width:10%;
+height:24%;
+top:25%;
+left:15%;
+background-image: url('https://i.imgur.com/rMGOt3g.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#picbox3 {
+position:absolute;
+border:1px solid #999999;
+width:10%;
+height:24%;
+top:51%;
+left:15%;
+background-image: url('https://i.imgur.com/qAF4iRQ.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#content {
+position:absolute;
+overflow:auto;
+border:1px solid #999999;
+background-color:#cccccc;
+padding:2%;
+width:35%;
+height:41.7%;
+top:25%;
+left:45%;
+color:#000000;
+font-family:Amaranth;
+font-size:80%;
+}
+
+#tabbox1 {
+position:absolute;
+border:1px solid #999999;
+background-color:#ffffff;
+width:1%;
+height:5%;
+left:46%;
+top:21%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover {
+height:8%;
+top:18%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+border:1px solid #999999;
+background-color:#ffffff;
+width:1%;
+height:6%;
+left:47.5%;
+top:19%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2:hover {
+height:8%;
+top:18%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+border:1px solid #999999;
+background-color:#ffffff;
+width:1%;
+height:5%;
+left:49%;
+top:22%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3:hover {
+height:8%;
+top:18%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+border:1px solid #999999;
+background-color:#ffffff;
+width:1%;
+height:8%;
+left:50.5%;
+top:18%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4:hover {
+height:8%;
+top:18%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5 {
+position:absolute;
+border:1px solid #999999;
+background-color:#ffffff;
+width:1%;
+height:5%;
+left:52%;
+top:21%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5:hover {
+height:8%;
+top:18%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox6 {
+position:absolute;
+border:1px solid #999999;
+background-color:#ffffff;
+width:1%;
+height:5%;
+left:53.5%;
+top:22%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox6:hover {
+height:8%;
+top:18%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs{
+display:block;
+opacity:0;
+width:100%;
+height:100%;
+text-align:center;
+color:#102f3b;
+font-family:Amaranth;
+font-size:100%;
+background-color:#cccccc;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs:hover {
+opacity:1;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6 {
+display: none;
+}
+
+i {
+color:#102f3b;
+font-size:100%;
+}
+
+a {
+color:#102f3b;
+}
+
+h1 {
+color: #444444;
+letter-spacing:3px;
+font-family: Unica One;
+text-align:center;
+font-size: 90%;
+}
+
+b {
+font-size: 80%;
+color:#102f3b;
+font-family:Unica One;
+}
+</style>
+
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=Amaranth|Unica+One" rel="stylesheet">
+<script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab1')">1</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab2')">2</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab3')">3</span>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation ('tab4')">4</span>
+</div>
+<div id="tabbox5">
+<span class="tabs" onClick="changeNavigation ('tab5')">5</span>
+</div>
+<div id="tabbox6">
+<span class="tabs" onClick="changeNavigation ('tab6')">6</span>
+</div>
+
+<div id="picbox1">
+</div>
+<div id="picbox2">
+</div>
+<div id="picbox3">
+</div>
+
+<div id="content">
+<h1>Basic Information</h1>
+<b>Name:</b> Mab<br>
+<b>Title:</b> North Queen<br>
+<b>Physical Age:</b> Late Twenties - Early Thirties<br>
+<b>True Age:</b> Ageless - Immortal<br>
+<b>Birthdate:</b> Unknown<br>
+<b>Gender:</b> Female<br>
+<b>Sexuality:</b> Heterosexual<br>
+<b>Species:</b> Faerie<br>
+<b>Race:</b> Northern Sidhe<br>
+<b>Trees:</b> -Information Locked-<br>
+<b>Rank:</b> High Auror<br>
+<b>Occupation:</b> Queen of Murias, Knight of the Night<br>
+<b>Patron Diety:</b> Crescent<br>
+<b>Height:</b> 6'1"<br>
+<b>Weight:</b> 140 lbs.
+<br><br>
+<h1>Detailed Information</h1>
+<b>Appearance</b><br>
+Fairly tall for a typical humanoid female, but not to the extreme in height, Mab is clearly a warrior. Her build is slender but athletic, with most of her hourglass shape being outlined and defined by clear hard muscle, and while her body isn't seductively curved she is still lithe, graceful, and beautiful. Typically she is seen to have long silky blonde hair that is generally straight and left to hang freely around her shoulders and her face, with pale porcelain skin and intense hazel-green eyes, although many are unsure if this is truly what she looks like or simply traits she has created for herself through her magic. While seemingly youthful, with soft rounded facial features, there is a stern wisdom behind her gaze and an authoratative set to her jaw suggesting she is not as easily pushed over as she seems.
+<br><br>
+<b>Personality</b><br>
+"Regal" is a very good word to sum up the extent of her personality, or at least the side of her people actually see in action. Mab is generally very curt, and while she is known to be merciful and kind her subjects are well aware that it is only for the sake of courtesy, and should the need arise for her to be cold and cruel she is fully capable of filling said need.
+</div>
+
+<div id="title">
+Queen Mab
+</div>
+
+<div id="tab1">
+<h1>Lore Behind the Faerie Realms</h1>
+Magic always existed across realities, shaping and forming worlds, causing creatures to adapt during evolution and take all new heights. Among these realms, there was one species that was as common as magic itself, and that species was known as the Human Race. Humans had the ability to access magic from the beginning--they developed mana pools within their body--but they never became aware of their own potential. They had to be helped, and eventually they were, but that's a story for another time. 
+<br><br>
+While humans began populating different worlds and started becoming the most common species in existence, their mana went unused and began building up. Then explorers and breeders became dreamers, and their nights were filled with images of objects and events they strongly desired. Their built up mass of unused mana began responding to their dreams. Influenced by the strong desires and emotions of humans, the Faerie Realms were born. It was like a paradise, a world of perfection and balance, where horror lived in harmony with content happiness. 
+<br><br>
+Pretty soon a whole new dimension was formed in parallel to all the worlds humans occupied, and a physical place wasn't the only thing their desires formed; eventually an indigenous people were born. These were the first Fae-kind, awaking with a preset purpose and fate, already a specific age, gender, appearance. Of course, they were all beautiful regardless of their fate and their gender. 
+<br><br>
+The first Faeries banded together to create a split government and formed the foundation and support that would still uphold their world to this day if it wasn't for the war that destroyed them all.
+<br><br>
+<h1>Mab's Story</h1>
+--LOCKED CONTENT--
+</div>
+
+<div id="tab2">
+<h1>High Auror Medium</h1>
+--LOCKED CONTENT--
+</div>
+
+<div id="tab3">
+<h1>Faerie Racials</h1>
+<b>Immortality</b><br>
+The First Generation Faeries were "born" into one single physical age and remain that age eternally. They can die from anything except natural causes. 
+<br><br>
+<b>Mana Sensitivity</b><br>
+The Fae-kind are very sensitive to auras and mana, allowing them to feel or see when another being is drawing from their mana pool or activating their mana, even if something is blocking their vision, a faint outline of an aura can be seen--or sensed--so long as the fellow magic user is within a twenty foot radius of the Fae. She cannot tell how much mana is being used or the user has left over, she is merely sensitive to when it is currently in use within the radius. 
+<br><br>
+<b>Enhanced Speed</b><br>
+The body of the Fae-kind is light, petite, and athletic. They can move double the speed of the average human and the strongest Fae's speeds can rival that of a hummingbird's. 
+<br><br>
+<b>Enhanced Flexibility</b><br>
+Their bodies are as flexible as they are light, allowing them to contort their shapes into absurd formations. Something someone would expect to see in a circus act. 
+<br><br>
+<b>Burning Calories</b><br>
+The Fae-kind eat thousands upon thousands of calories on purpose and burn them off very quickly. Physical sugary foods is said to help their mental and magic stability, often allowing them slightly faster mana regeneration than what is average if consumed when their mana-pool is either completely drained or close to it. 
+<br><br>
+<b>Hidden Wings</b><br>
+Tribal-like wing markings cover the backs of the Fae-kind. These tribal markings cause various different kinds of winged silhouettes to form as an aura behind each individual Faerie when they dip into their mana pool. 
+<br><br>
+<b>Advanced Perception</b><br>
+Rather than rise in the ranks of typical physical speed, her mind processes actions and comes up with a reaction twice as fast as the average human's. 
+<br><br>
+<b>Enhanced Strength</b><br>
+Years of physical training have paid off. Faeries always had the capacity to be physically strong despite their average dainty figures. This Faerie is now twice as strong as the average human, thanks to the years of hard work and the significant rise in power. 
+</div>
+
+<div id="tab4">
+<h1>High Auror; ???</h1>
+--LOCKED CONTENT--
+</div>
+
+<div id="tab5">
+<h1>Expert Mage; ???</h1>
+--LOCKED CONTENT--
+</div>
+
+<div id="tab6">
+<h1>Mage; ???</h1>
+--LOCKED CONTENT--
+</div>

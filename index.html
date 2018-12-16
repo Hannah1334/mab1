@@ -1,111 +1,66 @@
-<style>
+<script>resizeTo(screen.availWidth, screen.availHeight);</script> 
+
+<style type="text/css">
+
 body{
-background-image: url('https://i.imgur.com/hk8YOP5.gif') !important; 
-background-repeat:no-repeat !important; 
+background-image: url('') !important; 
+background-repeat:repeat !important; 
 background-position:center !important; 
-background-size:cover;
-background-color:#ffffff;
+background-color:#15130F;
 }
 
-::-webkit-scrollbar {width: 3px; height: 3px;}
+::-webkit-scrollbar {width: 4px; height: 4px;}
 ::-webkit-scrollbar-track {background: none;}
-::-webkit-scrollbar-thumb {background: #666666;}
+::-webkit-scrollbar-thumb {background: #39281B;}
 
-#title {
+#maintitle {
 position:absolute;
-width:25%;
-height:10%;
-top:13%;
-left:60%;
-text-align:center;
-font-size:500%;
-color:#102f3b;
-font-family:Unica One;
+background-color:#39281B;
+width:20%;
+height:4%;
+left:30%;
+top:9%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:2vh;
+line-height:2;
 }
 
-#picbox1 {
+#sidebar1 {
 position:absolute;
-border:1px solid #999999;
-width:18%;
-height:50%;
-top:25%;
-left:26%;
-background-image: url('https://i.imgur.com/dAhpxP8.jpg') !important; 
-background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
-}
-
-#picbox1:hover {
-background-image: url('https://i.imgur.com/KvLHkvb.png') !important; 
-background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
-}
-
-#picbox2 {
-position:absolute;
-border:1px solid #999999;
-width:10%;
-height:24%;
-top:25%;
-left:15%;
-background-image: url('https://i.imgur.com/rMGOt3g.jpg') !important; 
-background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
-}
-
-#picbox3 {
-position:absolute;
-border:1px solid #999999;
-width:10%;
-height:24%;
-top:51%;
-left:15%;
-background-image: url('https://i.imgur.com/qAF4iRQ.jpg') !important; 
-background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
-}
-
-#content {
-position:absolute;
-overflow:auto;
-border:1px solid #999999;
-background-color:#cccccc;
-padding:2%;
-width:35%;
-height:41.7%;
-top:25%;
-left:45%;
-color:#000000;
-font-family:Amaranth;
-font-size:80%;
+background-color:#39281B;
+width:2%;
+height:20%;
+left:30%;
+top:14%;
 }
 
 #tabbox1 {
 position:absolute;
-border:1px solid #999999;
-background-color:#ffffff;
-width:1%;
-height:5%;
-left:46%;
-top:21%;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
+background-color:#593D2A;
+width:2%;
+height:4%;
+left:30%;
+top:35%;
+color:#EEDFC1;
+font-size:3vh;
+line-height:1.3;
+text-align:center;
 }
 
-#tabbox1:hover {
-height:8%;
-top:18%;
+#tabbutton1 {
+position:absolute;
+opacity:0;
+background-color:#EEDFC1;
+width:20%;
+height:4%;
+left:30%;
+top:35%;
+color:#593D2A;
+font-size:2vh;
+line-height:2;
+font-family: 'Raleway', sans-serif;
+text-transform:uppercase;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
@@ -113,20 +68,30 @@ transition: all 0.8s ease-out;
 
 #tabbox2 {
 position:absolute;
-border:1px solid #999999;
-background-color:#ffffff;
-width:1%;
-height:6%;
-left:47.5%;
-top:19%;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
+background-color:#593D2A;
+text-align:center;
+width:2%;
+height:4%;
+left:30%;
+top:40%;
+color:#EEDFC1;
+font-size:3vh;
+line-height:1.3;
 }
 
-#tabbox2:hover {
-height:8%;
-top:18%;
+#tabbutton2 {
+position:absolute;
+opacity:0;
+background-color:#EEDFC1;
+width:20%;
+height:4%;
+left:30%;
+top:40%;
+color:#593D2A;
+font-size:2vh;
+line-height:2;
+font-family: 'Raleway', sans-serif;
+text-transform:uppercase;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
@@ -134,20 +99,30 @@ transition: all 0.8s ease-out;
 
 #tabbox3 {
 position:absolute;
-border:1px solid #999999;
-background-color:#ffffff;
-width:1%;
-height:5%;
-left:49%;
-top:22%;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
+background-color:#593D2A;
+text-align:center;
+width:2%;
+height:4%;
+left:30%;
+top:45%;
+color:#EEDFC1;
+font-size:3vh;
+line-height:1.3;
 }
 
-#tabbox3:hover {
-height:8%;
-top:18%;
+#tabbutton3 {
+position:absolute;
+opacity:0;
+background-color:#EEDFC1;
+width:20%;
+height:4%;
+left:30%;
+top:45%;
+color:#593D2A;
+font-size:2vh;
+line-height:2;
+font-family: 'Raleway', sans-serif;
+text-transform:uppercase;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
@@ -155,20 +130,30 @@ transition: all 0.8s ease-out;
 
 #tabbox4 {
 position:absolute;
-border:1px solid #999999;
-background-color:#ffffff;
-width:1%;
-height:8%;
-left:50.5%;
-top:18%;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
+background-color:#593D2A;
+text-align:center;
+width:2%;
+height:4%;
+left:30%;
+top:50%;
+color:#EEDFC1;
+font-size:3vh;
+line-height:1.3;
 }
 
-#tabbox4:hover {
-height:8%;
-top:18%;
+#tabbutton4 {
+position:absolute;
+opacity:0;
+background-color:#EEDFC1;
+width:20%;
+height:4%;
+left:30%;
+top:50%;
+color:#593D2A;
+font-size:2vh;
+line-height:2;
+font-family: 'Raleway', sans-serif;
+text-transform:uppercase;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
@@ -176,20 +161,30 @@ transition: all 0.8s ease-out;
 
 #tabbox5 {
 position:absolute;
-border:1px solid #999999;
-background-color:#ffffff;
-width:1%;
-height:5%;
-left:52%;
-top:21%;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
+background-color:#593D2A;
+text-align:center;
+width:2%;
+height:4%;
+left:30%;
+top:55%;
+color:#EEDFC1;
+font-size:3vh;
+line-height:1.3;
 }
 
-#tabbox5:hover {
-height:8%;
-top:18%;
+#tabbutton5 {
+position:absolute;
+opacity:0;
+background-color:#EEDFC1;
+width:20%;
+height:4%;
+left:30%;
+top:55%;
+color:#593D2A;
+font-size:2vh;
+line-height:2;
+font-family: 'Raleway', sans-serif;
+text-transform:uppercase;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
@@ -197,156 +192,663 @@ transition: all 0.8s ease-out;
 
 #tabbox6 {
 position:absolute;
-border:1px solid #999999;
-background-color:#ffffff;
-width:1%;
-height:5%;
-left:53.5%;
-top:22%;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
-}
-
-#tabbox6:hover {
-height:8%;
-top:18%;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
-}
-
-.tabs{
-display:block;
-opacity:0;
-width:100%;
-height:100%;
+background-color:#593D2A;
 text-align:center;
-color:#102f3b;
-font-family:Amaranth;
-font-size:100%;
-background-color:#cccccc;
+width:2%;
+height:4%;
+left:30%;
+top:60%;
+color:#EEDFC1;
+font-size:3vh;
+line-height:1.3;
+}
+
+#tabbutton6 {
+position:absolute;
+opacity:0;
+background-color:#EEDFC1;
+width:20%;
+height:4%;
+left:30%;
+top:60%;
+color:#593D2A;
+font-size:2vh;
+line-height:2;
+font-family: 'Raleway', sans-serif;
+text-transform:uppercase;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
 }
 
-.tabs:hover {
+#tabbutton1:hover,#tabbutton2:hover,#tabbutton3:hover,#tabbutton4:hover,#tabbutton5:hover,#tabbutton6:hover {
+left:25%;
 opacity:1;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
 }
 
-#tab1,#tab2,#tab3,#tab4,#tab5,#tab6 {
+#sidebar2 {
+position:absolute;
+background-color:#39281B;
+width:2%;
+height:20%;
+left:30%;
+top:65%;
+}
+
+#pic {
+position:absolute;
+background-color:#39281B;
+width:17.5%;
+height:50%;
+left:32.5%;
+top:14%;
+}
+
+#basicbox {
+position:absolute;
+background-color:#593D2A;
+padding:1%;
+width:6.5%;
+height:15.7%;
+left:32.5%;
+top:65%;
+font-family: 'Raleway', sans-serif;
+font-size:1.3vh;
+color:#D29752;
+}
+
+#detailbox {
+position:absolute;
+background-color:#593D2A;
+padding:1%;
+overflow:auto;
+width:6.5%;
+height:15.7%;
+left:41.5%;
+top:65%;
+font-family: 'Raleway', sans-serif;
+font-size:1.3vh;
+color:#D29752;
+}
+
+#bottombar {
+position:absolute;
+background-color:#39281B;
+width:20%;
+height:4%;
+left:30%;
+top:86%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:2vh;
+line-height:2;
+}
+
+#tabtitle {
+position:absolute;
+background-color:#39281B;
+width:20%;
+height:4%;
+left:50.5%;
+top:9%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:2vh;
+line-height:2;
+}
+
+#content {
+position:absolute;
+background-color:#593D2A;
+padding:1%;
+overflow:auto;
+width:18%;
+height:39.5%;
+top:14%;
+left:50.5%;
+font-family: 'Raleway', sans-serif;
+font-size:1.5vh;
+color:#D29752;
+}
+
+#family {
+position:absolute;
+background-color:#593D2A;
+width:20%;
+height:10%;
+top:59%;
+left:50.5%;
+}
+
+#familytitle {
+position:absolute;
+background-color:#39281B;
+width:20%;
+height:4%;
+top:70%;
+left:50.5%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:2vh;
+line-height:2;
+}
+
+#colleagues {
+position:absolute;
+background-color:#593D2A;
+width:20%;
+height:10%;
+top:75%;
+left:50.5%;
+}
+
+#colleaguestitle {
+position:absolute;
+background-color:#39281B;
+width:20%;
+height:4%;
+top:86%;
+left:50.5%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:2vh;
+line-height:2;
+}
+
+#spriggan {
+position:absolute;
+background-color:#4B3C1E;
+width:6%;
+height:8%;
+top:60%;
+left:51%;
+}
+
+#sprigganpic {
+position:absolute;
+width:2%;
+height:4%;
+top:60%;
+left:51%;
+background-image: url('https://i.imgur.com/XFCAxao.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+}
+
+#sprigganname {
+position:absolute;
+background-color:#292723;
+width:4%;
+height:4%;
+top:60%;
+left:53%;
+font-family: 'Raleway', sans-serif;
+font-size:1.5vh;
+color:#C19B8B;
+text-align:center;
+line-height:2.5;
+}
+
+#sprigganrelation {
+position:absolute;
+background-color:#15130F;
+width:6%;
+height:4%;
+top:64%;
+left:51%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:1.5vh;
+line-height:2.8;
+text-align:center;
+}
+
+#robin {
+position:absolute;
+background-color:#4B3C1E;
+width:6%;
+height:8%;
+top:60%;
+left:57.5%;
+}
+
+#robinpic {
+position:absolute;
+width:2%;
+height:4%;
+top:60%;
+left:57.5%;
+background-image: url('https://i.imgur.com/JZbnCTk.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+}
+
+#robinname {
+position:absolute;
+background-color:#292723;
+width:4%;
+height:4%;
+top:60%;
+left:59.5%;
+font-family: 'Raleway', sans-serif;
+font-size:1.5vh;
+color:#C19B8B;
+text-align:center;
+line-height:2.5;
+}
+
+#robinrelation {
+position:absolute;
+background-color:#15130F;
+width:6%;
+height:4%;
+top:64%;
+left:57.5%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:1.5vh;
+line-height:2.8;
+text-align:center;
+}
+
+#frost {
+position:absolute;
+background-color:#4B3C1E;
+width:6%;
+height:8%;
+top:60%;
+left:64%;
+}
+
+#frostpic {
+position:absolute;
+width:2%;
+height:4%;
+top:60%;
+left:64%;
+background-image: url('https://i.imgur.com/K0EkdZo.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+}
+
+#frostname {
+position:absolute;
+background-color:#292723;
+width:4%;
+height:4%;
+top:60%;
+left:66%;
+font-family: 'Raleway', sans-serif;
+font-size:1.5vh;
+color:#C19B8B;
+text-align:center;
+line-height:2.5;
+}
+
+#frostrelation {
+position:absolute;
+background-color:#15130F;
+width:6%;
+height:4%;
+top:64%;
+left:64%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:1.5vh;
+line-height:2.8;
+text-align:center;
+}
+
+#oberon {
+position:absolute;
+background-color:#4B3C1E;
+width:6%;
+height:8%;
+top:76%;
+left:51%;
+}
+
+#oberonpic {
+position:absolute;
+background-color:#000000;
+width:2%;
+height:4%;
+top:76%;
+left:51%;
+background-image: url('https://i.imgur.com/mQxtLyh.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+}
+
+#oberonname {
+position:absolute;
+background-color:#292723;
+width:4%;
+height:4%;
+top:76%;
+left:53%;
+font-family: 'Raleway', sans-serif;
+font-size:1.5vh;
+color:#C19B8B;
+text-align:center;
+line-height:2.5;
+}
+
+#koo1 {
+position:absolute;
+background-color:#15130F;
+width:6%;
+height:4%;
+top:80%;
+left:51%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:1.5vh;
+line-height:2.8;
+text-align:center;
+}
+
+#titania {
+position:absolute;
+background-color:#4B3C1E;
+width:6%;
+height:8%;
+top:76%;
+left:57.5%;
+}
+
+#titaniapic {
+position:absolute;
+background-color:#000000;
+width:2%;
+height:4%;
+top:76%;
+left:57.5%;
+background-image: url('https://i.imgur.com/BmwIE64.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+}
+
+#titanianame {
+position:absolute;
+background-color:#292723;
+width:4%;
+height:4%;
+top:76%;
+left:59.5%;
+font-family: 'Raleway', sans-serif;
+font-size:1.5vh;
+color:#C19B8B;
+text-align:center;
+line-height:2.5;
+}
+
+#koo2 {
+position:absolute;
+background-color:#15130F;
+width:6%;
+height:4%;
+top:80%;
+left:57.5%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:1.5vh;
+line-height:2.8;
+text-align:center;
+}
+
+#gossamer {
+position:absolute;
+background-color:#4B3C1E;
+width:6%;
+height:8%;
+top:76%;
+left:64%;
+}
+
+#gossamerpic {
+position:absolute;
+background-color:#000000;
+width:2%;
+height:4%;
+top:76%;
+left:64%;
+background-image: url('https://i.imgur.com/yevhb9V.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+}
+
+#gossamername {
+position:absolute;
+background-color:#292723;
+width:4%;
+height:4%;
+top:76%;
+left:66%;
+font-family: 'Raleway', sans-serif;
+font-size:1.5vh;
+color:#C19B8B;
+text-align:center;
+line-height:2.5;
+}
+
+#koo3 {
+position:absolute;
+background-color:#15130F;
+width:6%;
+height:4%;
+top:80%;
+left:64%;
+font-family: 'Charm', cursive;
+color:#EEDFC1;
+font-size:1.5vh;
+line-height:2.8;
+text-align:center;
+}
+
+.tabs{
+display:block;
+width:100%;
+height:100%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs:hover {
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9,#tab10,#tab11,#tab12,#tab13,#tab14,#tab15,#tab16,#tab17,#tab18 {
 display: none;
 }
 
 i {
-color:#102f3b;
-font-size:100%;
+color:#000000;
 }
 
 a {
-color:#102f3b;
+color:#000000;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
 }
 
-h1 {
-color: #444444;
-letter-spacing:3px;
-font-family: Unica One;
-text-align:center;
-font-size: 90%;
+a:hover {
+color:#FFFFFF;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
 }
 
 b {
-font-size: 80%;
-color:#102f3b;
-font-family:Unica One;
+color:#C19B8B;
+font-family: 'Major Mono Display', monospace;
 }
+
 </style>
 
-<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important;}</style>
-<link href="https://fonts.googleapis.com/css?family=Amaranth|Unica+One" rel="stylesheet">
+<style type="text/css">* {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=Charm|Major+Mono+Display|Raleway" rel="stylesheet">
 <script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation1(id) {document.getElementById('tabtitle').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation2(id) {document.getElementById('pic').innerHTML=document.getElementById(id).innerHTML}</script>
 
-<div id="tabbox1">
-<span class="tabs" onClick="changeNavigation ('tab1')">1</span>
-</div>
-<div id="tabbox2">
-<span class="tabs" onClick="changeNavigation ('tab2')">2</span>
-</div>
-<div id="tabbox3">
-<span class="tabs" onClick="changeNavigation ('tab3')">3</span>
-</div>
-<div id="tabbox4">
-<span class="tabs" onClick="changeNavigation ('tab4')">4</span>
-</div>
-<div id="tabbox5">
-<span class="tabs" onClick="changeNavigation ('tab5')">5</span>
-</div>
-<div id="tabbox6">
-<span class="tabs" onClick="changeNavigation ('tab6')">6</span>
-</div>
+<html>
 
-<div id="picbox1">
+<div id="maintitle">
+<FONT COLOR="#39281B">.</FONT> ━ The Moth Queen
 </div>
-<div id="picbox2">
+<div id="sidebar1"></div>
+<div id="tabbox1">➀</div>
+<div id="tabbutton1">
+<span class="tabs" onClick="changeNavigation ('tab1');changeNavigation1 ('tab2');changeNavigation2 ('tab3')"><FONT COLOR="#EEDFC1">.</FONT>Lore</span>
 </div>
-<div id="picbox3">
+<div id="tabbox2">➁</div>
+<div id="tabbutton2">
+<span class="tabs" onClick="changeNavigation ('tab4');changeNavigation1 ('tab5');changeNavigation2 ('tab6')"><FONT COLOR="#EEDFC1">.</FONT>Inventory</span>
 </div>
-
-<div id="content">
-<h1>Basic Information</h1>
+<div id="tabbox3">➂</div>
+<div id="tabbutton3">
+<span class="tabs" onClick="changeNavigation ('tab7');changeNavigation1 ('tab8');changeNavigation2 ('tab9')"><FONT COLOR="#EEDFC1">.</FONT>Racials</span>
+</div>
+<div id="tabbox4">➃</div>
+<div id="tabbutton4">
+<span class="tabs" onClick="changeNavigation ('tab10');changeNavigation1 ('tab11');changeNavigation2 ('tab12')"><FONT COLOR="#EEDFC1">.</FONT>Druidism</span>
+</div>
+<div id="tabbox5">➄</div>
+<div id="tabbutton5">
+<span class="tabs" onClick="changeNavigation ('tab13');changeNavigation1 ('tab14');changeNavigation2 ('tab15')"><FONT COLOR="#EEDFC1">.</FONT>Cryomancy</span>
+</div>
+<div id="tabbox6">➅</div>
+<div id="tabbutton6">
+<span class="tabs" onClick="changeNavigation ('tab16');changeNavigation1 ('tab17');changeNavigation2 ('tab18')"><FONT COLOR="#EEDFC1">.</FONT>Unity</span>
+</div>
+<div id="sidebar2"></div>
+<div id="pic">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/jmw3CxU.jpg"/>
+</div>
+<div id="basicbox">
 <b>Name:</b> Mab<br>
-<b>Title:</b> North Queen<br>
-<b>Physical Age:</b> Late Twenties - Early Thirties<br>
-<b>True Age:</b> Ageless - Immortal<br>
-<b>Birthdate:</b> Unknown<br>
+<b>Title:</b> The Winter Queen<br>
 <b>Gender:</b> Female<br>
-<b>Sexuality:</b> Heterosexual<br>
 <b>Species:</b> Faerie<br>
-<b>Race:</b> Northern Sidhe<br>
-<b>Trees:</b> -Information Locked-<br>
-<b>Rank:</b> High Auror<br>
-<b>Occupation:</b> Queen of Murias, Knight of the Night<br>
-<b>Patron Diety:</b> Crescent<br>
-<b>Height:</b> 6'1"<br>
-<b>Weight:</b> 140 lbs.
-<br><br>
-<h1>Detailed Information</h1>
-<b>Appearance</b><br>
-Fairly tall for a typical humanoid female, but not to the extreme in height, Mab is clearly a warrior. Her build is slender but athletic, with most of her hourglass shape being outlined and defined by clear hard muscle, and while her body isn't seductively curved she is still lithe, graceful, and beautiful. Typically she is seen to have long silky blonde hair that is generally straight and left to hang freely around her shoulders and her face, with pale porcelain skin and intense hazel-green eyes, although many are unsure if this is truly what she looks like or simply traits she has created for herself through her magic. While seemingly youthful, with soft rounded facial features, there is a stern wisdom behind her gaze and an authoratative set to her jaw suggesting she is not as easily pushed over as she seems.
-<br><br>
-<b>Personality</b><br>
-"Regal" is a very good word to sum up the extent of her personality, or at least the side of her people actually see in action. Mab is generally very curt, and while she is known to be merciful and kind her subjects are well aware that it is only for the sake of courtesy, and should the need arise for her to be cold and cruel she is fully capable of filling said need.
+<b>Race:</b> Firstborn Sidhe<br>
+<b>Occupation:</b> Queen of the Northern Kingdom
 </div>
-
-<div id="title">
-Queen Mab
+<div id="detailbox">
+<b>Eye Color:</b><br>Hazel Green<br>
+<b>Hair Color:</b><br>Blond<br>
+<b>Body Type:</b><br>Shapely, Athletic<br>
+<b>Skin Color:</b><br> Caucasian<br>
+<b>Aura Manifest:</b><br>Moth
+</div>
+<div id="bottombar">
+<FONT COLOR="#39281B">.</FONT> ━ Lady Mab, Monarch of Murias
+</div>
+<div id="tabtitle">
+<FONT COLOR="#39281B">.</FONT> ━ History of the Faerie Realms
+</div>
+<div id="content">
+Magic always existed across the vast multiverse, shaping and forming worlds, causing creatures to adapt during evolution and take all new heights. Among these phenomena, there was one species that was as common as magic itself, and that species was known as the Human Race. Humans had the ability to access magic from the beginning--they developed mana pools within their body--but the birth of the Faerie Realms happened back before they knew how to draw on the ambient mana of the world, and the magic that naturally resided within themselves. 
+<br><br>
+While humans continued to spread their own throughout the planes of existence, making them more and more consistently common in the multiverse, their mana went unused and began building up. Explorers and breeders became dreamers, and their nights were filled with images of objects and events they strongly desired. Their built up mass of unused mana began responding to their dreams, and as a result influenced their intense desires and emotions causing a tumor-like growth of magic where all of their mana fed dreams and thoughts conglomerated together into a single mass. An influx of energy triggered a massive explosion, but when the metaphorical smoke cleared an entire new world was revealed. This was the Faerie Realms, a mystical place that looked and behaved like a paradise! 
+<br><br>
+From the same burst came the first natives to these lands, the Fae, or Faeries. An entire race of varying creatures with different sub-species, born from what they call “The Dream” which was the collective of mankind’s magic imbued thought. They banded together to form a society, dividing themselves into four kingdoms, and the cultures of which varied vastly. Regardless of who a Faerie was and where in their world they resided, all of the Firstborns--those born directly from The Dream itself--experienced the same kind of awakening. An entire predetermined “backstory,” giving them personality, skills, and morals, was shown to them in a dreamlike state, and then they opened their eyes for the first time and simply existed, everything set in place as though they picked right up where The Dream left off. Many soon came to discover that defying The Dream in extremist ways led to them becoming twisted dark versions of themselves, causing the beginning of a worldwide religion known as The Path. Should a Faerie stray from what their Dream showed them to be, they might end up facing severe repercussion via their own laws of nature. Before long fear would drive this religion to become forced with borderline tyrannical methods. 
+</div>
+<div id="family"></div>
+<div id="spriggan"></div>
+<a target="_blank" href="https://i.imgur.com/XFCAxao.png"><div id="sprigganpic"></div></a>
+<div id="sprigganname">
+Spriggan
+</div>
+<div id="sprigganrelation">
+Eldest Son
+</div>
+<div id="robin"></div>
+<a target="_blank" href="https://i.imgur.com/JZbnCTk.png"><div id="robinpic"></div></a>
+<div id="robinname">
+Robin
+</div>
+<div id="robinrelation">
+Middle Child
+</div>
+<div id="frost"></div>
+<a target="_blank" href="https://i.imgur.com/K0EkdZo.png"><div id="frostpic"></div></a>
+<div id="frostname">
+Frost
+</div>
+<div id="frostrelation">
+Heir to the Throne
+</div>
+<div id="familytitle">
+<FONT COLOR="#39281B">.</FONT> ━ Family Members
+</div>
+<div id="colleagues"></div>
+<div id="oberon"></div>
+<a target="_blank" href="https://i.imgur.com/mQxtLyh.png"><div id="oberonpic"></div></a>
+<div id="oberonname">
+Oberon
+</div>
+<div id="koo1">
+Gorias
+</div>
+<div id="titania"></div>
+<a target="_blank" href="https://i.imgur.com/BmwIE64.png"><div id="titaniapic"></div></a>
+<div id="titanianame">
+Titania
+</div>
+<div id="koo2">
+Finias
+</div>
+<div id="gossamer"></div>
+<a target="_blank" href="https://i.imgur.com/yevhb9V.jpg"><div id="gossamerpic"></div></a>
+<div id="gossamername">
+???
+</div>
+<div id="koo3">
+Falias
+</div>
+<div id="colleaguestitle">
+<FONT COLOR="#39281B">.</FONT> ━ Fellow Monarchs
 </div>
 
 <div id="tab1">
-<h1>Lore Behind the Faerie Realms</h1>
-Magic always existed across realities, shaping and forming worlds, causing creatures to adapt during evolution and take all new heights. Among these realms, there was one species that was as common as magic itself, and that species was known as the Human Race. Humans had the ability to access magic from the beginning--they developed mana pools within their body--but they never became aware of their own potential. They had to be helped, and eventually they were, but that's a story for another time. 
+Magic always existed across the vast multiverse, shaping and forming worlds, causing creatures to adapt during evolution and take all new heights. Among these phenomena, there was one species that was as common as magic itself, and that species was known as the Human Race. Humans had the ability to access magic from the beginning--they developed mana pools within their body--but the birth of the Faerie Realms happened back before they knew how to draw on the ambient mana of the world, and the magic that naturally resided within themselves. 
 <br><br>
-While humans began populating different worlds and started becoming the most common species in existence, their mana went unused and began building up. Then explorers and breeders became dreamers, and their nights were filled with images of objects and events they strongly desired. Their built up mass of unused mana began responding to their dreams. Influenced by the strong desires and emotions of humans, the Faerie Realms were born. It was like a paradise, a world of perfection and balance, where horror lived in harmony with content happiness. 
+While humans continued to spread their own throughout the planes of existence, making them more and more consistently common in the multiverse, their mana went unused and began building up. Explorers and breeders became dreamers, and their nights were filled with images of objects and events they strongly desired. Their built up mass of unused mana began responding to their dreams, and as a result influenced their intense desires and emotions causing a tumor-like growth of magic where all of their mana fed dreams and thoughts conglomerated together into a single mass. An influx of energy triggered a massive explosion, but when the metaphorical smoke cleared an entire new world was revealed. This was the Faerie Realms, a mystical place that looked and behaved like a paradise! 
 <br><br>
-Pretty soon a whole new dimension was formed in parallel to all the worlds humans occupied, and a physical place wasn't the only thing their desires formed; eventually an indigenous people were born. These were the first Fae-kind, awaking with a preset purpose and fate, already a specific age, gender, appearance. Of course, they were all beautiful regardless of their fate and their gender. 
-<br><br>
-The first Faeries banded together to create a split government and formed the foundation and support that would still uphold their world to this day if it wasn't for the war that destroyed them all.
-<br><br>
-<h1>Mab's Story</h1>
---LOCKED CONTENT--
+From the same burst came the first natives to these lands, the Fae, or Faeries. An entire race of varying creatures with different sub-species, born from what they call “The Dream” which was the collective of mankind’s magic imbued thought. They banded together to form a society, dividing themselves into four kingdoms, and the cultures of which varied vastly. Regardless of who a Faerie was and where in their world they resided, all of the Firstborns--those born directly from The Dream itself--experienced the same kind of awakening. An entire predetermined “backstory,” giving them personality, skills, and morals, was shown to them in a dreamlike state, and then they opened their eyes for the first time and simply existed, everything set in place as though they picked right up where The Dream left off. Many soon came to discover that defying The Dream in extremist ways led to them becoming twisted dark versions of themselves, causing the beginning of a worldwide religion known as The Path. Should a Faerie stray from what their Dream showed them to be, they might end up facing severe repercussion via their own laws of nature. Before long fear would drive this religion to become forced with borderline tyrannical methods. 
 </div>
-
 <div id="tab2">
-<h1>High Auror Medium</h1>
---LOCKED CONTENT--
+<FONT COLOR="#39281B">.</FONT> ━ History of the Faerie Realms
+</div>
+<div id="tab3">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/jmw3CxU.jpg"/>
 </div>
 
-<div id="tab3">
-<h1>Faerie Racials</h1>
+<div id="tab4">
+Work in progress.
+</div>
+<div id="tab5">
+<FONT COLOR="#39281B">.</FONT> ━ High Auror Medium
+</div>
+<div id="tab6">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/yDOi9mj.jpg"/>
+</div>
+
+<div id="tab7">
 <b>Immortality</b><br>
 The First Generation Faeries were "born" into one single physical age and remain that age eternally. They can die from anything except natural causes. 
 <br><br>
@@ -371,18 +873,43 @@ Rather than rise in the ranks of typical physical speed, her mind processes acti
 <b>Enhanced Strength</b><br>
 Years of physical training have paid off. Faeries always had the capacity to be physically strong despite their average dainty figures. This Faerie is now twice as strong as the average human, thanks to the years of hard work and the significant rise in power. 
 </div>
-
-<div id="tab4">
-<h1>High Auror; ???</h1>
---LOCKED CONTENT--
+<div id="tab8">
+<FONT COLOR="#39281B">.</FONT> ━ Firstborn Sidhe Racials
+</div>
+<div id="tab9">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/jrFTRmX.jpg"/>
 </div>
 
-<div id="tab5">
-<h1>Expert Mage; ???</h1>
---LOCKED CONTENT--
+<div id="tab10">
+<i>"Magic which allows the caster to transform into an animal. Whether it be for agility, dexterity, small size, raw power, or simple deception, the ability to transfigure is a skill of adaptability and creativity. Druids are attuned to the natural world through this process, and are passively capable of communicating with wildlife. Upon reaching expert mage, Druids gain access to lunar energy, a powerful mana that can inflict coldburn,  freezing the innards of a person while simultaneously burning their skin. This can cause extreme necrotic damage in certain scenarios."</i>
+</div>
+<div id="tab11">
+<FONT COLOR="#39281B">.</FONT> ━ Druidism; High Auror
+</div>
+<div id="tab12">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/UXDMqWr.jpg"/>
 </div>
 
-<div id="tab6">
-<h1>Mage; ???</h1>
---LOCKED CONTENT--
+<div id="tab13">
+<i>"Often seen as the most primal or basic form of magic, Elementalists tap into one of six different elements to produce their magic. Each possesses a different mana type, and may use their spells to generate their chosen element. Cryomancy is the ability to control ice, cold, and snow."</i>
 </div>
+<div id="tab14">
+<FONT COLOR="#39281B">.</FONT> ━ Cryomancy; Expert Mage
+</div>
+<div id="tab15">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/hdPrwuT.jpg"/>
+</div>
+
+<div id="tab16">
+<i>"Mages of this class enjoy a special irony; although mages are often powerful beings who devastate the battlefield with their raw power, Unity mages instead control powerful beings. Familiars are almost always biological creatures, but may take the form of animated objects, mechanical menaces, or even metaphysical spirits. Familiars act as mediums to the Unity mage controlling them, meaning that any spells the mage is able to cast may be channeled or cast through the familiars. As an added bonus, each familiar grants it's controller some form of boon; an aspect of the creature's power is most common. A hawk may enhance one's eyesight, or a bear may bolster one's strength permanently. These aspects are more often than not passive abilities."</i>
+</div>
+<div id="tab17">
+<FONT COLOR="#39281B">.</FONT> ━ Unity; Mage
+</div>
+<div id="tab18">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/MQnGWTu.png"/>
+</div>
+
+<embed style="height: 0%; width: 0%;"src="Mab.mp3" autostart="true" loop="true">
+
+</html>
